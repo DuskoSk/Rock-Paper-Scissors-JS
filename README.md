@@ -1,2 +1,2 @@
 # Rock Paper Scissors JS
-https://duskosk.github.io/The-Game/
+https://duskosk.github.io/Rock-Paper-Scissors-JS/
