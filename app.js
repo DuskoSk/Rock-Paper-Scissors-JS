@@ -8,17 +8,17 @@ const playRound = (playerSelection, computerSelection) => {
         case `scissorspaper`:
         case `rockscissors`:
         case `paperrock`:
-            result = {winner: 1, text: `You chose: ${userSelection}\n Computer chose: ${computerSelection}\n You won this round!`};
+            result = {winner: 1, text: `You chose: ${playerSelection}\n Computer chose: ${computerSelection}\n You won this round!`};
             break;
         case `scissorsrock`:
         case `paperscissors`:
         case `rockpaper`:
-            result = {winner: 2, text: `You chose: ${userSelection}\n Computer chose: ${computerSelection}\n You lost this round!`};
+            result = {winner: 2, text: `You chose: ${playerSelection}\n Computer chose: ${computerSelection}\n You lost this round!`};
             break;
         case `paperpaper`:
         case `rockrock`:
         case `scissorsscissors`:
-            result = {winner: 0, text: `You chose: ${userSelection}\n Computer chose: ${computerSelection}\n This round is a tie!`}
+            result = {winner: 0, text: `You chose: ${playerSelection}\n Computer chose: ${computerSelection}\n This round is a tie!`}
             break; 
     }
     return result;

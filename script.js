@@ -4,27 +4,27 @@ function computerPlay(choices) {
 
 function playRound(playerSelection, computerSelection) {
   if (playerSelection === computerSelection) {
-    return {winner: 0, text: `You chose: ${userSelection}\n Computer chose: ${computerSelection}\n This round is a tie!`};
+    return {winner: 0, text: `You chose: ${playerSelection}\n Computer chose: ${computerSelection}\n This round is a tie!`};
   }
   else if (playerSelection === `rock`) {
     if (computerSelection === `paper`) {
-      return {winner: 2, text: `You chose: ${userSelection}\n Computer chose: ${computerSelection}\n You lost this round!`};
+      return {winner: 2, text: `You chose: ${playerSelection}\n Computer chose: ${computerSelection}\n You lost this round!`};
     } else {
-          return {winner: 1, text: `You chose: ${userSelection}\n Computer chose: ${computerSelection}\n You won this round!`};
+          return {winner: 1, text: `You chose: ${playerSelection}\n Computer chose: ${computerSelection}\n You won this round!`};
       }
   }
   else if (playerSelection === `paper`) {
     if (computerSelection === `scissors`) {
-      return {winner: 2, text: `You chose: ${userSelection}\n Computer chose: ${computerSelection}\n You lost this round!`};
+      return {winner: 2, text: `You chose: ${playerSelection}\n Computer chose: ${computerSelection}\n You lost this round!`};
     } else {
-          return {winner: 1, text: `You chose: ${userSelection}\n Computer chose: ${computerSelection}\n You won this round!`};
+          return {winner: 1, text: `You chose: ${playerSelection}\n Computer chose: ${computerSelection}\n You won this round!`};
       }
   }
   else if (playerSelection === `scissors`) {
     if (computerSelection === `rock`) {
-      return {winner: 2, text: `You chose: ${userSelection}\n Computer chose: ${computerSelection}\n You lost this round!`};
+      return {winner: 2, text: `You chose: ${playerSelection}\n Computer chose: ${computerSelection}\n You lost this round!`};
     } else {
-          return {winner: 1, text: `You chose: ${userSelection}\n Computer chose: ${computerSelection}\n You won this round!`};
+          return {winner: 1, text: `You chose: ${playerSelection}\n Computer chose: ${computerSelection}\n You won this round!`};
       }
   }
 }
