@@ -31,18 +31,19 @@ game = () => {
    
     for (let i = 0; i < 5; i++) {
         playerText = () => {
-            let playerSelection;
-            do {
-                playerSelection = prompt("Paper, Rock or Scissors?").toLowerCase();
-                playerSelection = choices.find((choice) => choice.toLowerCase() === playerSelection.toLowerCase());
-            } while (playerSelection === undefined)
-            return playerSelection;
+            let playerSelection = prompt(`Paper, Rock or Scissors?`).toLowerCase();
+            while (!((playerSelection === `rock`) || (playerSelection === `paper`) || (playerSelection === `scissors`))) {
+                playerSelection= prompt(`Error, you can only type Rock, Paper, or Scissors`).toLowerCase();
+            }
+
+            return playerSelection
         }
 
             let playerSelection = playerText();
             let computerSelection = computerPlay(choices);
             const roundResult = playRound(playerSelection, computerSelection);
   
+            console.log(roundResult.text);
             alert(roundResult.text);
             if (roundResult.winner === 1) {
                 userScore++;
@@ -52,11 +53,14 @@ game = () => {
     }
     
     if (userScore > computerScore) {
-        alert(`User won the game!`)
+        console.log(`User won the game!`)
+        alert(`User won the game!`);
     } else if (userScore < computerScore) {
-        alert(`Computer won the game!`)
+        console.log(`Computer won the game!`);
+        alert(`Computer won the game!`);
     } else {
-        alert(`The game is a tie!`)
+        console.log(`The game is a tie!`);
+        alert(`The game is a tie!`);
     }
 }
   
