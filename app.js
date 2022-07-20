@@ -30,8 +30,16 @@ game = () => {
     const choices = ['rock', 'paper', 'scissors'];
    
     for (let i = 0; i < 5; i++) {
-        setTimeout(() => {
-            let playerSelection = prompt(`Choose Rock, Paper, or Scissors `).toLowerCase();
+        playerText = () => {
+            let playerSelection;
+            do {
+                playerSelection = prompt("Paper, Rock or Scissors?");
+                playerSelection = choices.find((choice) => choice.toLowerCase() === playerSelection.toLowerCase());
+            } while (playerSelection === undefined)
+            return playerSelection;
+        }
+
+            let playerSelection = playerText();
             let computerSelection = computerPlay(choices);
             const roundResult = playRound(playerSelection, computerSelection);
   
@@ -41,18 +49,15 @@ game = () => {
             } else if (roundResult.winner === 2) {
                 computerScore++;
             }
-        }, 10)
     }
     
-    setTimeout(() => {
-        if (userScore > computerScore) {
-            console.log(`User won the game!`)
-        } else if (userScore < computerScore) {
-            console.log(`Computer won the game!`)
-        } else {
-            console.log(`The game is a tie!`)
-        }
-    }, 20)
+    if (userScore > computerScore) {
+        console.log(`User won the game!`)
+    } else if (userScore < computerScore) {
+        console.log(`Computer won the game!`)
+    } else {
+        console.log(`The game is a tie!`)
+    }
 }
   
 game();
