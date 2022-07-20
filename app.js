@@ -43,7 +43,7 @@ game = () => {
             let computerSelection = computerPlay(choices);
             const roundResult = playRound(playerSelection, computerSelection);
   
-            console.log(roundResult.text);
+            alert(roundResult.text);
             if (roundResult.winner === 1) {
                 userScore++;
             } else if (roundResult.winner === 2) {
@@ -52,11 +52,11 @@ game = () => {
     }
     
     if (userScore > computerScore) {
-        console.log(`User won the game!`)
+        alert(`User won the game!`)
     } else if (userScore < computerScore) {
-        console.log(`Computer won the game!`)
+        alert(`Computer won the game!`)
     } else {
-        console.log(`The game is a tie!`)
+        alert(`The game is a tie!`)
     }
 }
   
