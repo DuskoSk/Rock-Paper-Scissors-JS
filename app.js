@@ -33,7 +33,7 @@ game = () => {
         playerText = () => {
             let playerSelection;
             do {
-                playerSelection = prompt("Paper, Rock or Scissors?");
+                playerSelection = prompt("Paper, Rock or Scissors?").toLowerCase();
                 playerSelection = choices.find((choice) => choice.toLowerCase() === playerSelection.toLowerCase());
             } while (playerSelection === undefined)
             return playerSelection;
