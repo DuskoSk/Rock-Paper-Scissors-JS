@@ -53,7 +53,7 @@ game = () => {
     }
     
     if (userScore > computerScore) {
-        console.log(`User won the game!`)
+        console.log(`User won the game!`);
         alert(`User won the game!`);
     } else if (userScore < computerScore) {
         console.log(`Computer won the game!`);
